@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- ================================
+       DOCUMENT SETTINGS
+  ================================= -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Shop thoughtfully selected everyday essentials at Forma."
+  >
+
+  <title>Forma — Everyday, elevated.</title>
+
+
+  <!-- ================================
+       STYLES & SCRIPTS
+  ================================= -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <script
+    src="script.js"
+    defer
+  ></script>
+
+</head>
+
+
+<body>
+
+
+  <!-- ================================
+       ANNOUNCEMENT BAR
+  ================================= -->
+
+  <div class="announcement">
+    Thoughtful essentials. Free shipping on orders $100+.
+  </div>
+
+
+  <!-- ================================
+       HEADER & NAVIGATION
+  ================================= -->
+
+  <header class="header">
+
+    <div class="container header-inner">
+
+      <!-- Logo -->
+
+      <a
+        href="#"
+        class="logo"
+        aria-label="Forma home"
+      >
+        forma<span>.</span>
+      </a>
+
+
+      <!-- Navigation -->
+
+      <nav aria-label="Main navigation">
+
+        <a href="#shop">
+          Shop
+        </a>
+
+        <a href="#about">
+          Our story
+        </a>
+
+      </nav>
+
+
+      <!-- Shopping Bag -->
+
+      <button
+        id="cart-button"
+        class="cart-button"
+        type="button"
+      >
+        Bag
+        <span id="cart-count">0</span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================================
+       MAIN CONTENT
+  ================================= -->
+
+  <main>
+
+
+    <!-- ================================
+         HERO SECTION
+    ================================= -->
+
+    <section class="hero container">
+
+
+      <!-- Hero Text -->
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">
+          LESS, BUT BETTER
+        </p>
+
+
+        <h1>
+          Everyday,<br>
+          <em>elevated.</em>
+        </h1>
+
+
+        <p class="hero-description">
+
+          Considered essentials for the way you live.
+          Beautiful design, without the unnecessary.
+
+        </p>
+
+
+        <!-- Hero Button -->
+
+        <a
+          href="#shop"
+          class="button primary"
+        >
+          Explore the collection ↗
+        </a>
+
+
+        <div class="hero-note">
+          Made for your everyday moments.
+        </div>
+
+      </div>
+
+
+      <!-- Hero Product Artwork -->
+
+      <div
+        class="hero-art"
+        aria-label="Featured headphones illustration"
+      >
+
+        <span class="hero-circle"></span>
+
+
+        <span
+          class="hero-emoji"
+          aria-hidden="true"
+        >
+          🎧
+        </span>
+
+
+        <span class="floating-label">
+          GOOD DESIGN. GREAT SOUND.
+        </span>
+
+
+        <!-- Featured Product Card -->
+
+        <div class="hero-product">
+
+          <div>
+
+            <small>
+              THE EVERYDAY COLLECTION
+            </small>
+
+            <strong>
+              Studio Headphones
+            </strong>
+
+          </div>
+
+
+          <a
+            href="#shop"
+            aria-label="Shop the collection"
+          >
+            ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         STORE BENEFITS
+    ================================= -->
+
+    <section
+      class="benefits container"
+      aria-label="Store benefits"
+    >
+
+      <div>
+        <span aria-hidden="true">↗</span>
+        Free shipping over $100
+      </div>
+
+
+      <div>
+        <span aria-hidden="true">↺</span>
+        Designed for everyday use
+      </div>
+
+
+      <div>
+        <span aria-hidden="true">♡</span>
+        Carefully curated essentials
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         SHOP / PRODUCT COLLECTION
+    ================================= -->
+
+    <section
+      id="shop"
+      class="shop container"
+    >
+
+
+      <!-- Section Heading -->
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            THE COLLECTION
+          </p>
+
+          <h2>
+            Find your new favorite.
+          </h2>
+
+        </div>
+
+
+        <!-- Product Results Count -->
+
+        <p
+          id="results-count"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+
+      <!-- ================================
+           PRODUCT FILTERS & SEARCH
+      ================================= -->
+
+      <div class="toolbar">
+
+
+        <!-- Category Filters -->
+
+        <div
+          id="categories"
+          class="categories"
+          aria-label="Filter by category"
+        >
+
+          <button
+            class="chip active"
+            data-category="All"
+            aria-pressed="true"
+          >
+            All
+          </button>
+
+
+          <button
+            class="chip"
+            data-category="Tech"
+            aria-pressed="false"
+          >
+            Tech
+          </button>
+
+
+          <button
+            class="chip"
+            data-category="Lifestyle"
+            aria-pressed="false"
+          >
+            Lifestyle
+          </button>
+
+
+          <button
+            class="chip"
+            data-category="Home"
+            aria-pressed="false"
+          >
+            Home
+          </button>
+
+        </div>
+
+
+        <!-- Search & Sort -->
+
+        <div class="search-sort">
+
+
+          <!-- Product Search -->
+
+          <label
+            class="sr-only"
+            for="search"
+          >
+            Search products
+          </label>
+
+          <input
+            id="search"
+            type="search"
+            placeholder="Search essentials…"
+          >
+
+
+          <!-- Product Sorting -->
+
+          <label
+            class="sr-only"
+            for="sort"
+          >
+            Sort products
+          </label>
+
+          <select id="sort">
+
+            <option value="featured">
+              Featured
+            </option>
+
+            <option value="price-low">
+              Price: low to high
+            </option>
+
+            <option value="price-high">
+              Price: high to low
+            </option>
+
+            <option value="name">
+              Name: A–Z
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================================
+           PRODUCT GRID
+      ================================= -->
+
+      <div
+        id="product-grid"
+        class="product-grid"
+      ></div>
+
+
+      <!-- ================================
+           EMPTY SEARCH RESULTS
+      ================================= -->
+
+      <div
+        id="empty-results"
+        class="empty-state"
+        hidden
+      >
+
+        <h3>
+          No products found
+        </h3>
+
+        <p>
+          Try another search or explore a different category.
+        </p>
+
+        <button
+          id="reset-filters"
+          class="button secondary"
+        >
+          Reset filters
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         ABOUT / BRAND STORY
+    ================================= -->
+
+    <section
+      id="about"
+      class="story container"
+    >
+
+      <div>
+
+        <p class="eyebrow">
+          THE FORMA PHILOSOPHY
+        </p>
+
+        <h2>
+          Good things.<br>
+          Less noise.
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        We believe the things you use every day should feel a little special.
+        Our collection brings together simple forms, useful details, and
+        pieces you'll reach for again and again.
+
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ================================
+       FOOTER
+  ================================= -->
+
+  <footer class="footer container">
+
+
+    <!-- Footer Logo -->
+
+    <a
+      href="#"
+      class="logo"
+    >
+      forma<span>.</span>
+    </a>
+
+
+    <!-- Footer Description -->
+
+    <p>
+      Everyday essentials, thoughtfully selected.
+    </p>
+
+
+    <!-- Copyright -->
+
+    <small>
+      © <span id="year"></span>
+      Forma. Demo storefront.
+    </small>
+
+  </footer>
+
+
+  <!-- ================================
+       PRODUCT DETAILS DIALOG
+  ================================= -->
+
+  <dialog
+    id="product-dialog"
+    class="product-dialog"
+  >
+
+    <!-- Dialog Heading -->
+
+    <div class="dialog-heading">
+
+      <h2>
+        Product details
+      </h2>
+
+
+      <button
+        class="icon-button"
+        data-close="product-dialog"
+        aria-label="Close product details"
+      >
+        ✕
+      </button>
+
+    </div>
+
+
+    <!-- Product Details -->
+
+    <div id="product-details"></div>
+
+  </dialog>
+
+
+  <!-- ================================
+       SHOPPING CART
+  ================================= -->
+
+  <dialog
+    id="cart-dialog"
+    class="cart-dialog"
+  >
+
+
+    <!-- Cart Heading -->
+
+    <div class="dialog-heading">
+
+      <h2>
+        Your bag
+        <span id="cart-heading-count"></span>
+      </h2>
+
+
+      <button
+        class="icon-button"
+        data-close="cart-dialog"
+        aria-label="Close cart"
+      >
+        ✕
+      </button>
+
+    </div>
+
+
+    <!-- Cart Products -->
+
+    <div
+      id="cart-items"
+      class="cart-items"
+    ></div>
+
+
+    <!-- ================================
+         CART SUMMARY
+    ================================= -->
+
+    <div
+      id="cart-summary"
+      class="cart-summary"
+    >
+
+
+      <!-- Subtotal -->
+
+      <div>
+
+        <span>
+          Subtotal
+        </span>
+
+        <strong id="subtotal"></strong>
+
+      </div>
+
+
+      <!-- Shipping -->
+
+      <div>
+
+        <span>
+          Shipping
+        </span>
+
+        <strong id="shipping"></strong>
+
+      </div>
+
+
+      <!-- Shipping Information -->
+
+      <p id="shipping-note"></p>
+
+
+      <!-- Total -->
+
+      <div class="total-line">
+
+        <span>
+          Total
+        </span>
+
+        <strong id="total"></strong>
+
+      </div>
+
+
+      <!-- Demo Notice -->
+
+      <p class="fine-print">
+        Demo pricing in USD. Taxes are not calculated.
+      </p>
+
+
+      <!-- Checkout Button -->
+
+      <button
+        id="checkout-button"
+        class="button primary full-width"
+      >
+        Continue to checkout →
+      </button>
+
+
+      <!-- Continue Shopping -->
+
+      <button
+        class="text-button"
+        data-close="cart-dialog"
+      >
+        Continue shopping
+      </button>
+
+    </div>
+
+  </dialog>
+
+
+  <!-- ================================
+       CHECKOUT DIALOG
+  ================================= -->
+
+  <dialog
+    id="checkout-dialog"
+    class="checkout-dialog"
+  >
+
+
+    <!-- Checkout Heading -->
+
+    <div class="dialog-heading">
+
+      <h2>
+        Checkout
+      </h2>
+
+
+      <button
+        class="icon-button"
+        data-close="checkout-dialog"
+        aria-label="Close checkout"
+      >
+        ✕
+      </button>
+
+    </div>
+
+
+    <!-- Demo Notice -->
+
+    <p class="demo-notice">
+      Demo checkout. Use sample details; no payment will be collected.
+    </p>
+
+
+    <!-- ================================
+         CHECKOUT FORM
+    ================================= -->
+
+    <form id="checkout-form">
+
+
+      <!-- First & Last Name -->
+
+      <div class="form-row">
+
+        <label>
+
+          First name
+
+          <input
+            name="firstName"
+            autocomplete="given-name"
+            required
+            maxlength="60"
+          >
+
+        </label>
+
+
+        <label>
+
+          Last name
+
+          <input
+            name="lastName"
+            autocomplete="family-name"
+            required
+            maxlength="60"
+          >
+
+        </label>
+
+      </div>
+
+
+      <!-- Email -->
+
+      <label>
+
+        Email
+
+        <input
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+          maxlength="120"
+        >
+
+      </label>
+
+
+      <!-- Address -->
+
+      <label>
+
+        Street address
+
+        <input
+          name="address"
+          autocomplete="street-address"
+          required
+          maxlength="160"
+        >
+
+      </label>
+
+
+      <!-- City & State -->
+
+      <div class="form-row">
+
+        <label>
+
+          City
+
+          <input
+            name="city"
+            autocomplete="address-level2"
+            required
+            maxlength="80"
+          >
+
+        </label>
+
+
+        <label>
+
+          State
+
+          <input
+            name="state"
+            autocomplete="address-level1"
+            required
+            maxlength="80"
+          >
+
+        </label>
+
+      </div>
+
+
+      <!-- ZIP & Country -->
+
+      <div class="form-row">
+
+        <label>
+
+          ZIP code
+
+          <input
+            name="zip"
+            autocomplete="postal-code"
+            inputmode="numeric"
+            pattern="[0-9]{5}(-[0-9]{4})?"
+            title="Enter a five-digit ZIP code or ZIP+4."
+            required
+          >
+
+        </label>
+
+
+        <label>
+
+          Country
+
+          <select name="country">
+
+            <option value="US">
+              United States
+            </option>
+
+          </select>
+
+        </label>
+
+      </div>
+
+
+      <!-- Order Total -->
+
+      <div class="checkout-total">
+
+        <span>
+          Demo order total
+        </span>
+
+        <strong id="checkout-total"></strong>
+
+      </div>
+
+
+      <!-- Place Order -->
+
+      <button
+        type="submit"
+        class="button primary full-width"
+      >
+        Place demo order
+      </button>
+
+    </form>
+
+  </dialog>
+
+
+  <!-- ================================
+       ORDER CONFIRMATION
+  ================================= -->
+
+  <dialog
+    id="success-dialog"
+    class="success-dialog"
+  >
+
+
+    <!-- Success Icon -->
+
+    <div
+      class="success-icon"
+      aria-hidden="true"
+    >
+      ✓
+    </div>
+
+
+    <!-- Success Message -->
+
+    <h2>
+      Your demo order is complete.
+    </h2>
+
+
+    <p id="order-message"></p>
+
+
+    <p>
+      No payment was taken and no order will be shipped.
+    </p>
+
+
+    <!-- Back to Shopping -->
+
+    <button
+      class="button primary"
+      data-close="success-dialog"
+    >
+      Back to shopping
+    </button>
+
+  </dialog>
+
+
+  <!-- ================================
+       TOAST NOTIFICATION
+  ================================= -->
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+</body>
+
+</html>
